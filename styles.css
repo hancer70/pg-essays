@@ -275,6 +275,7 @@ body {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -340,7 +341,7 @@ body {
     font-size: 1.05rem;
     line-height: 1.8;
     color: var(--text-primary);
-    white-space: pre-wrap;
+    white-space: normal;
 }
 
 /* Responsive */
