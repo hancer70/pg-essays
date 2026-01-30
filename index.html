@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Graham Essays - Interactive Collection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">Paul Graham Essays</h1>
+                <p class="subtitle">A comprehensive collection of <span id="essay-count">229</span> essays</p>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search essays..." class="search-input">
+                    <span class="search-icon">🔍</span>
+                </div>
+
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="startups_entrepreneurship">Startups</button>
+                    <button class="filter-btn" data-category="programming_technology">Programming</button>
+                    <button class="filter-btn" data-category="writing_creativity">Writing</button>
+                    <button class="filter-btn" data-category="philosophy_society">Philosophy</button>
+                    <button class="filter-btn" data-category="personal_biography">Personal</button>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="random-btn" class="action-btn">🎲 Random Essay</button>
+                    <button id="theme-toggle" class="action-btn">🌙 Dark Mode</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Results Info -->
+        <div class="results-info">
+            <span id="results-count">229 essays</span>
+        </div>
+
+        <!-- Essay Grid -->
+        <div id="essay-grid" class="essay-grid">
+            <!-- Essays will be loaded here -->
+        </div>
+    </div>
+
+    <!-- Essay Modal -->
+    <div id="essay-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+                <div class="modal-meta">
+                    <span id="modal-category" class="category-badge"></span>
+                    <span id="modal-reading-time"></span>
+                    <a id="modal-source" href="#" target="_blank" class="source-link">View Original →</a>
+                </div>
+            </div>
+            <div id="modal-content" class="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="essays.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
